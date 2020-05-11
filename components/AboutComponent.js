@@ -5,6 +5,7 @@ import { FlatList } from 'react-native';
 import { ListItem } from 'react-native-elements';
 import { connect } from 'react-redux'; 
 import { baseUrl } from '../shared/baseUrl';
+import { Loading } from './LoadingComponent';
 
   const mapStateToProps = state => {
     return {
@@ -47,9 +48,28 @@ import { baseUrl } from '../shared/baseUrl';
             );
         };
 
-        const { navigate } = this.props.navigation;
-
-        return (
+        if (this.props.leaders.isLoading) {
+          return (
+            <ScrollView>
+              <History/>
+              <Card title="Corporate Leadership">
+                  <Loading/>
+              </Card>
+            </ScrollView>
+         );
+        }
+        else if (this.props.leaders.errMess) {
+          return(
+          <ScrollView>
+              <History/>
+              <Card title="Corporate Leadership">
+                  <Text>{this.props.leaders.errMess}</Text>
+              </Card>
+            </ScrollView>
+          );
+        }
+        else {
+          return (
             <ScrollView>
             <History/>
             <Card title="Corporate Leadership">
@@ -61,7 +81,9 @@ import { baseUrl } from '../shared/baseUrl';
             </Card>
            </ScrollView>
         );
+      }
+
     }
-  }  
+  };
 
 export default connect(mapStateToProps)(About);
