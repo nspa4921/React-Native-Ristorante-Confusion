@@ -112,7 +112,7 @@ const ReservationNavigator = createStackNavigator({
     headerTintColor: "#fff",
     headerLeft: <Icon name="menu" size={24}
       iconStyle={{ color: 'white' }} 
-      onPress={ () => navigation.navigate('DrawerToggle') } />    
+      onPress={ () => navigation.toggleDrawer() } />    
   })
 })
 
@@ -192,21 +192,21 @@ const MainNavigator = createDrawerNavigator({
               color={tintColor}
               />
           )
-        }, 
+        }                                                                                                                                                               
       },
       Reservation:
       { screen: ReservationNavigator,
         navigationOptions: {
           title: 'Reserve Table',
           drawerLabel: 'Reserve Table',
-          drawerIcon: ({ tintColor, focused }) => (
+          drawerIcon: ({ tintColor }) => (
             <Icon
               name='cutlery'
               type='font-awesome'            
               size={24}
-              iconStyle={{ color: tintColor }}
+              color={tintColor}
             />
-          ),
+          )
         }
       }
 }, {
