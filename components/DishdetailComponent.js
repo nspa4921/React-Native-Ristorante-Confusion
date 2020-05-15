@@ -28,6 +28,7 @@ function RenderDish({ dish, favorite, markFavorite, openCommentForm
     else
         return false;
 }
+// Right to left //
 
 const panResponder = PanResponder.create({
   onStartShouldSetPanResponder: (e, gestureState) => {
