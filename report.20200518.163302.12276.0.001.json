@@ -1,0 +1,721 @@
+
+{
+  "header": {
+    "reportVersion": 2,
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20200518.163302.12276.0.001.json",
+    "dumpEventTime": "2020-05-18T16:33:02Z",
+    "dumpEventTimeStamp": "1589812382228",
+    "processId": 12276,
+    "threadId": null,
+    "cwd": "C:\\Users\\Nemanja\\Desktop\\React-Native\\confusion",
+    "commandLine": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\Nemanja\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\.bin\\\\..\\expo-cli\\bin\\expo.js",
+      "start"
+    ],
+    "nodejsVersion": "v12.16.3",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "win32",
+    "componentVersions": {
+      "node": "12.16.3",
+      "v8": "7.8.279.23-node.35",
+      "uv": "1.34.2",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.16.0",
+      "modules": "72",
+      "nghttp2": "1.40.0",
+      "napi": "5",
+      "llhttp": "2.0.4",
+      "http_parser": "2.9.3",
+      "openssl": "1.1.1g",
+      "cldr": "36.0",
+      "icu": "65.1",
+      "tz": "2019c",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "lts": "Erbium",
+      "headersUrl": "https://nodejs.org/download/release/v12.16.3/node-v12.16.3-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v12.16.3/node-v12.16.3.tar.gz",
+      "libUrl": "https://nodejs.org/download/release/v12.16.3/win-x64/node.lib"
+    },
+    "osName": "Windows_NT",
+    "osRelease": "10.0.18363",
+    "osVersion": "Windows 10 Pro",
+    "osMachine": "x86_64",
+    "cpus": [
+      {
+        "model": "Intel(R) Core(TM) i5-3317U CPU @ 1.70GHz",
+        "speed": 1696,
+        "user": 5348015,
+        "nice": 0,
+        "sys": 4756234,
+        "idle": 16888812,
+        "irq": 269250
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-3317U CPU @ 1.70GHz",
+        "speed": 1696,
+        "user": 5732531,
+        "nice": 0,
+        "sys": 3794390,
+        "idle": 17465671,
+        "irq": 110406
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-3317U CPU @ 1.70GHz",
+        "speed": 1696,
+        "user": 6250421,
+        "nice": 0,
+        "sys": 4201906,
+        "idle": 16540265,
+        "irq": 47250
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-3317U CPU @ 1.70GHz",
+        "speed": 1696,
+        "user": 6133906,
+        "nice": 0,
+        "sys": 3876078,
+        "idle": 16982609,
+        "irq": 36015
+      }
+    ],
+    "networkInterfaces": [
+      {
+        "name": "VirtualBox Host-Only Network",
+        "internal": false,
+        "mac": "0a:00:27:00:00:16",
+        "address": "fe80::35c2:e771:6efa:32e3",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 22
+      },
+      {
+        "name": "VirtualBox Host-Only Network",
+        "internal": false,
+        "mac": "0a:00:27:00:00:16",
+        "address": "192.168.56.1",
+        "netmask": "255.255.255.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "VirtualBox Host-Only Network #2",
+        "internal": false,
+        "mac": "0a:00:27:00:00:11",
+        "address": "fe80::6933:9640:51a3:ab95",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 17
+      },
+      {
+        "name": "VirtualBox Host-Only Network #2",
+        "internal": false,
+        "mac": "0a:00:27:00:00:11",
+        "address": "192.168.122.2",
+        "netmask": "255.255.255.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "Wi-Fi",
+        "internal": false,
+        "mac": "60:45:bd:f6:7f:6e",
+        "address": "2001:2012:10a:a500:5894:48f1:dc1a:2d",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Wi-Fi",
+        "internal": false,
+        "mac": "60:45:bd:f6:7f:6e",
+        "address": "fdbf:5fdf:f4c:0:5894:48f1:dc1a:2d",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Wi-Fi",
+        "internal": false,
+        "mac": "60:45:bd:f6:7f:6e",
+        "address": "2001:2012:10a:a500:b4c6:df5e:e1ec:c66e",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Wi-Fi",
+        "internal": false,
+        "mac": "60:45:bd:f6:7f:6e",
+        "address": "fdbf:5fdf:f4c:0:b4c6:df5e:e1ec:c66e",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Wi-Fi",
+        "internal": false,
+        "mac": "60:45:bd:f6:7f:6e",
+        "address": "fe80::5894:48f1:dc1a:2d",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 19
+      },
+      {
+        "name": "Wi-Fi",
+        "internal": false,
+        "mac": "60:45:bd:f6:7f:6e",
+        "address": "192.168.1.209",
+        "netmask": "255.255.255.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "Loopback Pseudo-Interface 1",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "::1",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "Loopback Pseudo-Interface 1",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "127.0.0.1",
+        "netmask": "255.0.0.0",
+        "family": "IPv4"
+      }
+    ],
+    "host": "Nemo"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x00007ff7b3bf2449",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b3bf69a9",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b3bf5828",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b3d2d8c2",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b4549bbe",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b4531c91",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b43fe1ec",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b4406171",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b43fb743",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b43f9db4",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b441afbd",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b4181871",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b4996c4d",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b493c4d2",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b4963000",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b491bbfc",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b491bbfc",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b491bbfc",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b491bbfc",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b491bbfc",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b491bbfc",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b4914f2c",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b491bbfc",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b4914f2c",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b491bbfc",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b491bbfc",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b491bbfc",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b491bbfc",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b4914f2c",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b491bbfc",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b491bbfc",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b491bbfc",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b491bbfc",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b491bbfc",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b491bbfc",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b491bbfc",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b491bbfc",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b4914f2c",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b491bbfc",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b491bbfc",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b491bbfc",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b491bbfc",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b4919131",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b4918d1c",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b44578a3",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b4457226",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b452829d",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b3dad2a8",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b3da6f53",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b3c6bd00",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b3c6c52c",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b3c67385",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b3dcc462",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b3dcf2ff",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b3dd962c",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b3dd9954",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b3ce4851",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b3d56433",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b3bc6a9c",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ff7b4a4ed38",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ffa10c37bd4",
+      "symbol": ""
+    },
+    {
+      "pc": "0x00007ffa10d8ce51",
+      "symbol": ""
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 34422784,
+    "totalCommittedMemory": 34422784,
+    "usedMemory": 32401592,
+    "availableMemory": 2104866992,
+    "memoryLimit": 2136997888,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 262144,
+        "committedMemory": 262144,
+        "capacity": 32808,
+        "used": 32808,
+        "available": 0
+      },
+      "new_space": {
+        "memorySize": 1048576,
+        "committedMemory": 1048576,
+        "capacity": 1047456,
+        "used": 1047384,
+        "available": 72
+      },
+      "old_space": {
+        "memorySize": 27668480,
+        "committedMemory": 27668480,
+        "capacity": 27351752,
+        "used": 26639888,
+        "available": 711864
+      },
+      "code_space": {
+        "memorySize": 954368,
+        "committedMemory": 954368,
+        "capacity": 801248,
+        "used": 670432,
+        "available": 130816
+      },
+      "map_space": {
+        "memorySize": 1576960,
+        "committedMemory": 1576960,
+        "capacity": 1574320,
+        "used": 1172640,
+        "available": 401680
+      },
+      "large_object_space": {
+        "memorySize": 2863104,
+        "committedMemory": 2863104,
+        "capacity": 2835656,
+        "used": 2835656,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 49152,
+        "committedMemory": 49152,
+        "capacity": 2784,
+        "used": 2784,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 1047456,
+        "used": 0,
+        "available": 1047456
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 9.062,
+    "kernelCpuSeconds": 6.265,
+    "cpuConsumptionPercent": 17.417,
+    "maxRss": 95113216,
+    "pageFaults": {
+      "IORequired": 48131,
+      "IONotRequired": 0
+    },
+    "fsActivity": {
+      "reads": 2975,
+      "writes": 20
+    }
+  },
+  "libuv": [
+  ],
+  "workers": [
+  ],
+  "environmentVariables": {
+    "=C:": "C:\\Users\\Nemanja\\Desktop\\React-Native\\confusion",
+    "ACLOCAL_PATH": "/mingw64/share/aclocal:/usr/share/aclocal",
+    "ALLUSERSPROFILE": "C:\\ProgramData",
+    "APPDATA": "C:\\Users\\Nemanja\\AppData\\Roaming",
+    "ChocolateyInstall": "C:\\ProgramData\\chocolatey",
+    "ChocolateyLastPathUpdate": "132327259430083022",
+    "COMMONPROGRAMFILES": "C:\\Program Files\\Common Files",
+    "CommonProgramFiles(x86)": "C:\\Program Files (x86)\\Common Files",
+    "CommonProgramW6432": "C:\\Program Files\\Common Files",
+    "COMPUTERNAME": "NEMO",
+    "COMSPEC": "C:\\WINDOWS\\system32\\cmd.exe",
+    "CONFIG_SITE": "/mingw64/etc/config.site",
+    "DISPLAY": "needs-to-be-defined",
+    "DriverData": "C:\\Windows\\System32\\Drivers\\DriverData",
+    "ESET_OPTIONS": "                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ",
+    "EXEPATH": "C:\\Program Files\\Git",
+    "FPS_BROWSER_APP_PROFILE_STRING": "Internet Explorer",
+    "FPS_BROWSER_USER_PROFILE_STRING": "Default",
+    "FP_NO_HOST_CHECK": "NO",
+    "HOME": "C:\\Users\\Nemanja",
+    "HOMEDRIVE": "C:",
+    "HOMEPATH": "\\Users\\Nemanja",
+    "HOSTNAME": "Nemo",
+    "INFOPATH": "/usr/local/info:/usr/share/info:/usr/info:/share/info",
+    "INIT_CWD": "C:\\Users\\Nemanja\\Desktop\\React-Native\\confusion",
+    "IOJS_ORG_MIRROR": "https://npm.taobao.org/mirrors/iojs",
+    "LANG": "en_US.UTF-8",
+    "LOCALAPPDATA": "C:\\Users\\Nemanja\\AppData\\Local",
+    "LOGONSERVER": "\\\\NEMO",
+    "MANPATH": "/mingw64/local/man:/mingw64/share/man:/usr/local/man:/usr/share/man:/usr/man:/share/man",
+    "MINGW_CHOST": "x86_64-w64-mingw32",
+    "MINGW_PACKAGE_PREFIX": "mingw-w64-x86_64",
+    "MINGW_PREFIX": "/mingw64",
+    "MSYSTEM": "MINGW64",
+    "MSYSTEM_CARCH": "x86_64",
+    "MSYSTEM_CHOST": "x86_64-w64-mingw32",
+    "MSYSTEM_PREFIX": "/mingw64",
+    "NODE": "C:\\Program Files\\nodejs\\node.exe",
+    "NODEJS_ORG_MIRROR": "https://npm.taobao.org/mirrors/node",
+    "NODIST_IOJS_MIRROR": "https://npm.taobao.org/mirrors/iojs",
+    "NODIST_NODE_MIRROR": "https://npm.taobao.org/mirrors/node",
+    "npm_config_argv": "{\"remain\":[],\"cooked\":[\"run\",\"start\"],\"original\":[\"start\"]}",
+    "npm_config_bin_links": "true",
+    "npm_config_ignore_optional": "",
+    "npm_config_ignore_scripts": "",
+    "npm_config_init_license": "MIT",
+    "npm_config_init_version": "1.0.0",
+    "npm_config_registry": "https://registry.yarnpkg.com",
+    "npm_config_save_prefix": "^",
+    "npm_config_strict_ssl": "true",
+    "npm_config_user_agent": "yarn/1.22.4 npm/? node/v12.16.3 win32 x64",
+    "npm_config_version_commit_hooks": "true",
+    "npm_config_version_git_message": "v%s",
+    "npm_config_version_git_sign": "",
+    "npm_config_version_git_tag": "true",
+    "npm_config_version_tag_prefix": "v",
+    "npm_execpath": "C:\\Program Files (x86)\\Yarn\\bin\\yarn.js",
+    "npm_lifecycle_event": "start",
+    "npm_lifecycle_script": "expo start",
+    "npm_node_execpath": "C:\\Program Files\\nodejs\\node.exe",
+    "npm_package_dependencies_expo": "~37.0.3",
+    "npm_package_dependencies_expo_permissions": "~8.1.0",
+    "npm_package_dependencies_expo_secure_store": "~8.1.0",
+    "npm_package_dependencies_react": "~16.9.0",
+    "npm_package_dependencies_react_dom": "~16.9.0",
+    "npm_package_dependencies_react_native": "https://github.com/expo/react-native/archive/sdk-37.0.1.tar.gz",
+    "npm_package_dependencies_react_native_animatable": "1.2.4",
+    "npm_package_dependencies_react_native_datepicker": "1.7.2",
+    "npm_package_dependencies_react_native_elements": "^1.0.0-beta8",
+    "npm_package_dependencies_react_native_swipeout": "2.3.3",
+    "npm_package_dependencies_react_native_web": "~0.11.7",
+    "npm_package_dependencies_react_navigation": "2.0.1",
+    "npm_package_dependencies_react_redux": "5.0.7",
+    "npm_package_dependencies_redux": "4.0.0",
+    "npm_package_dependencies_redux_logger": "3.0.6",
+    "npm_package_dependencies_redux_persist": "5.9.1",
+    "npm_package_dependencies_redux_thunk": "2.2.0",
+    "npm_package_devDependencies_babel_preset_expo": "~8.1.0",
+    "npm_package_devDependencies__babel_core": "^7.8.6",
+    "npm_package_main": "node_modules/expo/AppEntry.js",
+    "npm_package_name": "",
+    "npm_package_private": "true",
+    "npm_package_scripts_android": "expo start --android",
+    "npm_package_scripts_eject": "expo eject",
+    "npm_package_scripts_ios": "expo start --ios",
+    "npm_package_scripts_react_devtools": "react-devtools",
+    "npm_package_scripts_start": "expo start",
+    "npm_package_scripts_web": "expo start --web",
+    "npm_package_version": "",
+    "NUMBER_OF_PROCESSORS": "4",
+    "NVMW_IOJS_ORG_MIRROR": "https://npm.taobao.org/mirrors/iojs",
+    "NVMW_NODEJS_ORG_MIRROR": "https://npm.taobao.org/mirrors/node",
+    "NVMW_NPM_MIRROR": "https://npm.taobao.org/mirrors/npm",
+    "NVM_IOJS_ORG_MIRROR": "https://npm.taobao.org/mirrors/iojs",
+    "NVM_NODEJS_ORG_MIRROR": "https://npm.taobao.org/mirrors/node",
+    "OLDPWD": "/c/Users/Nemanja/Desktop/React-Native",
+    "OneDrive": "C:\\Users\\Nemanja\\OneDrive",
+    "OneDriveConsumer": "C:\\Users\\Nemanja\\OneDrive",
+    "ORIGINAL_PATH": "C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Users\\Nemanja\\bin;C:\\Python38\\Scripts;C:\\Python38;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0;C:\\WINDOWS\\System32\\OpenSSH;C:\\Program Files\\Git\\cmd;C:\\Program Files (x86)\\Yarn\\bin;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\nodejs;C:\\Users\\Nemanja\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Nemanja\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Program Files (x86)\\Microsoft VS Code\\bin;C:\\Users\\Nemanja\\AppData\\Local\\Yarn\\bin;C:\\nodejs-v7.9.0;C:\\Users\\Nemanja\\AppData\\Roaming\\npm",
+    "ORIGINAL_TEMP": "/tmp",
+    "ORIGINAL_TMP": "/tmp",
+    "OS": "Windows_NT",
+    "PATH": "C:\\Users\\Nemanja\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\@expo\\xdl\\binaries\\windows\\adb;C:\\Users\\Nemanja\\AppData\\Local\\Temp\\yarn--1589812292861-0.5997801355090244;C:\\Users\\Nemanja\\Desktop\\React-Native\\confusion\\node_modules\\.bin;C:\\Users\\Nemanja\\AppData\\Local\\Yarn\\Data\\link\\node_modules\\.bin;C:\\Program Files\\libexec\\lib\\node_modules\\npm\\bin\\node-gyp-bin;C:\\Program Files\\lib\\node_modules\\npm\\bin\\node-gyp-bin;C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\node-gyp-bin;C:\\Users\\Nemanja\\bin;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\local\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Users\\Nemanja\\bin;C:\\Python38\\Scripts;C:\\Python38;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0;C:\\WINDOWS\\System32\\OpenSSH;C:\\Program Files\\Git\\cmd;C:\\Program Files (x86)\\Yarn\\bin;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\nodejs;C:\\Users\\Nemanja\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Nemanja\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Program Files (x86)\\Microsoft VS Code\\bin;C:\\Users\\Nemanja\\AppData\\Local\\Yarn\\bin;C:\\nodejs-v7.9.0;C:\\Users\\Nemanja\\AppData\\Roaming\\npm;C:\\Program Files\\Git\\usr\\bin\\vendor_perl;C:\\Program Files\\Git\\usr\\bin\\core_perl",
+    "PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JSE;.WSF;.WSH;.MSC",
+    "PKG_CONFIG_PATH": "/mingw64/lib/pkgconfig:/mingw64/share/pkgconfig",
+    "PLINK_PROTOCOL": "ssh",
+    "PROCESSOR_ARCHITECTURE": "AMD64",
+    "PROCESSOR_IDENTIFIER": "Intel64 Family 6 Model 58 Stepping 9, GenuineIntel",
+    "PROCESSOR_LEVEL": "6",
+    "PROCESSOR_REVISION": "3a09",
+    "ProgramData": "C:\\ProgramData",
+    "PROGRAMFILES": "C:\\Program Files",
+    "ProgramFiles(x86)": "C:\\Program Files (x86)",
+    "ProgramW6432": "C:\\Program Files",
+    "PROMPT": "$P$G",
+    "PSModulePath": "C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules\\",
+    "PUBLIC": "C:\\Users\\Public",
+    "PWD": "/c/Users/Nemanja/Desktop/React-Native/confusion",
+    "SESSIONNAME": "Console",
+    "SHELL": "C:\\Program Files\\Git\\usr\\bin\\bash.exe",
+    "SHLVL": "2",
+    "SSH_ASKPASS": "/mingw64/libexec/git-core/git-gui--askpass",
+    "SYSTEMDRIVE": "C:",
+    "SYSTEMROOT": "C:\\WINDOWS",
+    "TEMP": "C:\\Users\\Nemanja\\AppData\\Local\\Temp",
+    "TMP": "C:\\Users\\Nemanja\\AppData\\Local\\Temp",
+    "TMPDIR": "C:\\Users\\Nemanja\\AppData\\Local\\Temp",
+    "USERDOMAIN": "NEMO",
+    "USERDOMAIN_ROAMINGPROFILE": "NEMO",
+    "USERNAME": "Nemanja",
+    "USERPROFILE": "C:\\Users\\Nemanja",
+    "VBOX_MSI_INSTALL_PATH": "C:\\Program Files\\Oracle\\VirtualBox\\",
+    "WINDIR": "C:\\WINDOWS",
+    "YARN_WRAP_OUTPUT": "false",
+    "_": "/usr/bin/winpty"
+  },
+  "sharedObjects": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "C:\\WINDOWS\\SYSTEM32\\ntdll.dll",
+    "C:\\WINDOWS\\System32\\KERNEL32.DLL",
+    "C:\\WINDOWS\\System32\\KERNELBASE.dll",
+    "C:\\WINDOWS\\System32\\WS2_32.dll",
+    "C:\\WINDOWS\\System32\\RPCRT4.dll",
+    "C:\\WINDOWS\\System32\\PSAPI.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\dbghelp.dll",
+    "C:\\WINDOWS\\System32\\ADVAPI32.dll",
+    "C:\\WINDOWS\\System32\\ucrtbase.dll",
+    "C:\\WINDOWS\\System32\\msvcrt.dll",
+    "C:\\WINDOWS\\System32\\sechost.dll",
+    "C:\\WINDOWS\\SYSTEM32\\IPHLPAPI.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\USERENV.dll",
+    "C:\\WINDOWS\\System32\\USER32.dll",
+    "C:\\WINDOWS\\System32\\profapi.dll",
+    "C:\\WINDOWS\\System32\\win32u.dll",
+    "C:\\WINDOWS\\System32\\GDI32.dll",
+    "C:\\WINDOWS\\System32\\gdi32full.dll",
+    "C:\\WINDOWS\\System32\\msvcp_win.dll",
+    "C:\\WINDOWS\\System32\\CRYPT32.dll",
+    "C:\\WINDOWS\\System32\\MSASN1.dll",
+    "C:\\WINDOWS\\System32\\bcrypt.dll",
+    "C:\\WINDOWS\\SYSTEM32\\WINMM.dll",
+    "C:\\WINDOWS\\SYSTEM32\\WINMMBASE.dll",
+    "C:\\WINDOWS\\System32\\cfgmgr32.dll",
+    "C:\\WINDOWS\\System32\\bcryptPrimitives.dll",
+    "C:\\WINDOWS\\System32\\IMM32.DLL",
+    "C:\\WINDOWS\\System32\\powrprof.dll",
+    "C:\\WINDOWS\\System32\\UMPDC.dll",
+    "C:\\WINDOWS\\SYSTEM32\\CRYPTBASE.DLL",
+    "C:\\WINDOWS\\system32\\uxtheme.dll",
+    "C:\\WINDOWS\\System32\\combase.dll",
+    "C:\\WINDOWS\\system32\\mswsock.dll",
+    "C:\\WINDOWS\\System32\\kernel.appcore.dll",
+    "C:\\WINDOWS\\system32\\napinsp.dll",
+    "C:\\WINDOWS\\system32\\pnrpnsp.dll",
+    "C:\\WINDOWS\\SYSTEM32\\DNSAPI.dll",
+    "C:\\WINDOWS\\System32\\NSI.dll",
+    "C:\\WINDOWS\\System32\\winrnr.dll",
+    "C:\\WINDOWS\\system32\\NLAapi.dll",
+    "C:\\WINDOWS\\system32\\wshbth.dll",
+    "C:\\WINDOWS\\SYSTEM32\\dhcpcsvc6.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\dhcpcsvc.DLL",
+    "C:\\Windows\\System32\\rasadhlp.dll",
+    "C:\\WINDOWS\\System32\\fwpuclnt.dll"
+  ]
+}
