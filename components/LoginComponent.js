@@ -32,36 +32,7 @@ class LoginTab extends Component {
                 }
             })
     }
-
-    getImageFromCamera = async () => {
-        const cameraPermission = await Permissions.askAsync(Permissions.CAMERA);
-        const cameraRollPermission = await Permissions.askAsync(Permissions.CAMERA_ROLL);
-
-        if (cameraPermission.status === 'granted' && cameraRollPermission.status === 'granted') {
-            let capturedImage = await ImagePicker.launchCameraAsync({
-                allowsEditing: true,
-                aspect: [4, 3],
-            });
-            if (!capturedImage.cancelled) {
-                console.log(capturedImage);
-                this.processImage(capturedImage.uri);
-            }
-        }
-
-    }
-
-    processImage = async (imageUri) => {
-        let processedImage = await ImageManipulator.manipulate(
-            imageUri, 
-            [
-                {resize: {width: 400}}
-            ],
-            {format: 'png'}
-        );
-        console.log(processedImage);
-        this.setState({imageUrl: processedImage.uri });
-
-    }
+    
     
     static navigationOptions = {
         title: 'Login',
@@ -122,6 +93,17 @@ class LoginTab extends Component {
 
 }
 class RegisterTab extends Component {
+    static navigationOptions = {
+        title: 'Register',
+        tabBarIcon: ({ tintColor, focused }) => (
+            <Icon
+              name='user-plus'
+              type='font-awesome'            
+              size={24}
+              iconStyle={{ color: tintColor }}
+            />
+          ) 
+    };  
 
     constructor(props) {
         super(props);
@@ -152,18 +134,38 @@ class RegisterTab extends Component {
             }
         }
     }
+
+    getImageFromGallery = async () => {
+        const cameraRollPermission = await Permissions.askAsync(Permissions.CAMERA_ROLL);
     
-    static navigationOptions = {
-        title: 'Register',
-        tabBarIcon: ({ tintColor, focused }) => (
-            <Icon
-              name='user-plus'
-              type='font-awesome'            
-              size={24}
-              iconStyle={{ color: tintColor }}
-            />
-          ) 
-    };
+        if (cameraRollPermission.status === 'granted') {
+          const libraryImage = await ImagePicker.launchImageLibraryAsync({
+            allowsEditing: true,
+            aspect: [4, 3],
+            mediaTypes: 'Images',
+          });
+    
+          if (!libraryImage.cancelled) {
+            this.processImage(libraryImage.uri);
+          }
+        }
+      }
+
+      processImage = async (imageUri) => {
+        try {
+          const processedImage = await ImageManipulator.manipulateAsync(
+            imageUri,
+            [
+              { resize: { width: 400 } },
+            ],
+            { format: 'png' },
+          );
+    
+          this.setState({ imageUrl: processedImage.uri });
+        } catch (error) {
+          console.log(error);
+        }
+      }
 
     handleRegister() {
         console.log(JSON.stringify(this.state));
@@ -186,43 +188,47 @@ class RegisterTab extends Component {
                         title="Camera"
                         onPress={this.getImageFromCamera}
                         />
+                        <Button
+                        title="Gallery"
+                        onPress={this.getImageFromGallery}
+                        />
                 </View>
                 <Input
-                    placeholder="Username"
+                    placeholder=" Username"
                     leftIcon={{ type: 'font-awesome', name: 'user-o' }}
                     onChangeText={(username) => this.setState({username})}
                     value={this.state.username}
                     containerStyle={styles.formInput}
                     />
                 <Input
-                    placeholder="Password"
+                    placeholder=" Password"
                     leftIcon={{ type: 'font-awesome', name: 'key' }}
                     onChangeText={(password) => this.setState({password})}
                     value={this.state.password}
                     containerStyle={styles.formInput}
                     />
                 <Input
-                    placeholder="First Name"
+                    placeholder=" First Name"
                     leftIcon={{ type: 'font-awesome', name: 'user-o' }}
                     onChangeText={(firstname) => this.setState({firstname})}
                     value={this.state.firstname}
                     containerStyle={styles.formInput}
                     />
                 <Input
-                    placeholder="Last Name"
+                    placeholder=" Last Name"
                     leftIcon={{ type: 'font-awesome', name: 'user-o' }}
                     onChangeText={(lastname) => this.setState({lastname})}
                     value={this.state.lastname}
                     containerStyle={styles.formInput}
                     />
                 <Input
-                    placeholder="Email"
+                    placeholder=" Email"
                     leftIcon={{ type: 'font-awesome', name: 'envelope-o' }}
                     onChangeText={(email) => this.setState({email})}
                     value={this.state.email}
                     containerStyle={styles.formInput}
                     />
-                <CheckBox title="Remember Me"
+                <CheckBox title=" Remember Me"
                     center
                     checked={this.state.remember}
                     onPress={() => this.setState({remember: !this.state.remember})}
@@ -259,7 +265,8 @@ const styles = StyleSheet.create({
     imageContainer: {
         flex: 1,
         flexDirection: 'row',
-        margin: 20
+        margin: 20,
+        justifyContent: 'space-around',    
     },
     image: {
       margin: 10,
