@@ -4,7 +4,9 @@ import DatePicker from 'react-native-datepicker';
 import * as Animatable from 'react-native-animatable';
 import * as Permissions from 'expo-permissions';
 import { Notifications } from 'expo';
-import * as Calendar from 'expo-calendar'; 
+import * as Calendar from 'expo-calendar';
+
+
 
 const styles = StyleSheet.create({
   formRow: {
@@ -14,7 +16,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     margin: 20,
   },
-
+  
   formLabel: {
     fontSize: 18,
     flex: 2,
@@ -23,6 +25,8 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 });
+
+
 class Reservation extends Component {
     static navigationOptions = {
       title: 'Reserve Table',
@@ -33,11 +37,10 @@ class Reservation extends Component {
         guests: 1,
         smoking: false,
         date: '',
-        expoPushToken: '',
-        notification: {},
       });
     }
 
+    
     static async obtainNotificationPermission() {
       let permission = await Permissions.getAsync(Permissions.USER_FACING_NOTIFICATIONS);
       if (permission.status !== 'granted') {
@@ -48,22 +51,17 @@ class Reservation extends Component {
       }
       return permission;
     }
+    
 
-
-
-    async obtainDefaultCalendarId() {
-      let calendar = null;
-      if (Platform.OS === 'ios') {
-        // ios: get default calendar
-        calendar = await Calendar.getDefaultCalendarAsync();
-      } else {
-        // Android: find calendar with `isPrimary` == true
-        const calendars = await Calendar.getCalendarsAsync();
-        calendar = (calendars) ?
-          (calendars.find(cal => cal.isPrimary) || calendars[0])
-          : null;
+    static async obtainCalendarPermission() {
+      let permission = await Permissions.getAsync(Permissions.CALENDAR);
+      if (permission.status !== 'granted') {
+        permission = await Permissions.askAsync(Permissions.CALENDAR);
+        if (permission.status !== 'granted') {
+          Alert.alert('Permission not granted to access the calendar');
+        }
       }
-      return (calendar) ? calendar.id : null;
+      return permission;
     }
     
     static async presentLocalNotification(date) {
@@ -76,21 +74,20 @@ class Reservation extends Component {
         },
         android: {
           sound: true,
-          priority:'max',
-          vibrate: [0, 250, 250, 250],
+          vibrate: true,
           color: '#512DA8',
         },
       });
     }
-
+    
     static async addReservationToCalendar(date) {
       await Reservation.obtainCalendarPermission();
       const startDate = new Date(Date.parse(date));
-      const endDate = new Date(Date.parse(date) + (2 * 60 * 60 * 1000)); // 2 hours
+      const endDate = new Date(Date.parse(date) + (2 * 60 * 60 * 1000)); 
       Calendar.createEventAsync(
-        Calendar.DEFAULT,
+        null,
         {
-          title: 'ConFusion Table Reservation',
+          title: 'Con Fusion Table Reservation',
           location: '121, Clear Water Bay Road, Clear Water Bay, Kowloon, Hong Kong',
           startDate,
           endDate,
@@ -99,14 +96,12 @@ class Reservation extends Component {
       );
       Alert.alert('Reservation has been added to your calendar');
     }
-    
-    
 
     constructor(props) {
       super(props);
       this.state = Reservation.defaultState();
     }
-
+    
     resetForm() {
       this.setState(Reservation.defaultState());
     }
@@ -145,6 +140,7 @@ class Reservation extends Component {
         guests,
         smoking,
       } = this.state;
+      
 
       return (
         <Animatable.View animation="zoomIn" duration={2000}>
